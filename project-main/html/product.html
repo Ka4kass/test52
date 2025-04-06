@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktdetails - Versity</title>
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="./test.html" class="logo">Versity</a>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="./test.html">Home</a></li>
+                        <li><a href="./stadt.html">Städte</a></li>
+                        <li><a href="./regionen.html">Bundesländer</a></li>
+                        <li><a href="./about.html">Über uns</a></li>
+                    </ul>
+                </nav>
+                <div class="order-icon">
+                    <img id="openModal" class="icon" src="img/shopping-bag.png" alt="Warenkorb Icon">
+                    <span id="orderCount" class="order-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>Ihr Warenkorb</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Zur Kasse</button>
+                <button id="clearOrders" class="btn btn-danger">Warenkorb leeren</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <!-- This will be populated by JavaScript -->
+    </section>
+
+    <!-- Similar Products Section -->
+    <section class="similar-products">
+        <div class="container">
+            <h2>Das könnte Ihnen auch gefallen</h2>
+            <div class="product-selection">
+                <!-- This will be populated by JavaScript with similar products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Versity</h3>
+                    <p>Hochwertige 3D-Modelle deutscher Architektur für Ihre kreativen Projekte.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stadt.html">Städte</a></li>
+                        <li><a href="regionen.html">Bundesländer</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundenservice</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Versand</a></li>
+                        <li><a href="#">Rückgaben</a></li>
+                        <li><a href="#">Zahlungsmethoden</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li>Email: info@versity.de</li>
+                        <li>Telefon: +49 30 1234567</li>
+                        <li>Adresse: Musterstraße 123, Berlin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification element -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Scripts -->
+     <script src="./js/modal.js"></script>
+    <script src="./js/tets2.js"></script>
+    <script src="./js/"></script>
+
+
+</body>
+</html>

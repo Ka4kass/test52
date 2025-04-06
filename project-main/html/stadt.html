@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versity - 3D Modelle</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="test.html" class="logo">Versity</a>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="test.html">Home</a></li>
+                        <li><a href="stadt.html">Städte</a></li>
+                        <li><a href="regionen.html">Bundesländer</a></li>
+                        <li><a href="about.html">About</a></li>
+
+
+                    </ul>
+                </nav>
+                <div class="order-icon">
+                    <img id="openModal" class="icon" src="img/shopping-bag.png" alt="Order Icon">
+                    <span id="orderCount" class="order-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>Ihr Warenkorb</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Zur Kasse</button>
+                <button id="clearOrders" class="btn btn-danger">Warenkorb leeren</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="container products-selection">
+        <h2 class="section-title">Ausgewählte Modelle</h2>
+        
+        
+        <div class="product-selection">
+            <!-- Product 1 -->
+            <a href="./product.html?name=Model%201&city=Lviv&price=50">
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/500" alt="Berliner Fernsehturm">
+                </div>
+                <div class="product-info">
+                    <h3>Berliner Fernsehturm</h3>
+                    <p class="location">Berlin</p>
+                    <p class="description">Ein ikonisches 3D-Modell des berühmten Fernsehturms im Herzen Berlins, detailgetreu nachgebildet.</p>
+                    <div class="product-meta">
+                        <span class="price">29 €</span>
+                        <span class="detail">Maßstab: 1:200 | Teile: 245</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+    
+            <!-- Product 2 -->
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/500" alt="Kölner Dom">
+                </div>
+                <div class="product-info">
+                    <h3>Kölner Dom</h3>
+                    <p class="location">Köln</p>
+                    <p class="description">Detailreiches 3D-Modell der gotischen Kathedrale, eines der bekanntesten Wahrzeichen Deutschlands.</p>
+                    <div class="product-meta">
+                        <span class="price">24 €</span>
+                        <span class="detail">Maßstab: 1:300 | Teile: 310</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product 3 -->
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                </div>
+                <div class="product-info">
+                    <h3>Hamburger Hafen</h3>
+                    <p class="location">Hamburg</p>
+                    <p class="description">Urbanes 3D-Modell der maritimen Landschaft Hamburgs mit detaillierten Hafenelementen.</p>
+                    <div class="product-meta">
+                        <span class="price">28 €</span>
+                        <span class="detail">Maßstab: 1:500 | Teile: 275</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="./img/test.jpg" alt="Hamburger Hafen">
+                </div>
+                <div class="product-info">
+                    <h3>Hamburger Hafen</h3>
+                    <p class="location">Hamburg</p>
+                    <p class="description">Urbanes 3D-Modell der maritimen Landschaft Hamburgs mit detaillierten Hafenelementen.</p>
+                    <div class="product-meta">
+                        <span class="price">28 €</span>
+                        <span class="detail">Maßstab: 1:500 | Teile: 275</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Versity</h3>
+                    <p>Hochwertige 3D-Modelle deutscher Architektur für Ihre kreativen Projekte.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Produkte</a></li>
+                        <li><a href="regions.html">Regionen</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundenservice</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Versand</a></li>
+                        <li><a href="#">Rückgaben</a></li>
+                        <li><a href="#">Zahlungsmethoden</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li>Email: info@versity.de</li>
+                        <li>Telefon: +49 30 1234567</li>
+                        <li>Adresse: Musterstraße 123, Berlin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/test.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/icon.js"></script>
+       

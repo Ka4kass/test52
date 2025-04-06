@@ -1,0 +1,514 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+a { color: inherit;
+        text-decoration: none;
+
+ } 
+
+
+/* Modal styles */
+.modal {
+    visibility: hidden; /* ✅ Використовуємо visibility замість display */
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal.open {
+    visibility: visible; /* ✅ Робимо вікно видимим */
+    opacity: 1;
+}
+
+.modal .content {
+    height: inherit;
+    position: fixed;
+    right: 0;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modal.open .content {
+    opacity: 1;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Розподіляє простір між елементами */
+    width: 100%; 
+}
+@media (max-width: 768px) {
+    .site-nav {
+        display: none;
+    }
+}
+
+.logo-primary {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.site-nav {
+    list-style: none;
+    display: flex;
+}
+
+.site-nav .item {
+    margin-right: 15px;
+}
+
+.site-nav .link {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.site-nav .link:hover, .site-nav .link.active {
+    color: #007bff;
+}
+
+.auch-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.auch-nav .item {
+    margin-left: 15px;
+}
+
+.auch-nav .link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.order-icon {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+.order-icon .icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+#orderCount {
+    
+
+}.product-card-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+/* Стилі для модального вікна */
+.modal {
+    display: none; /* Приховане за замовчуванням */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Вище за інші елементи */
+}
+
+.modal.open {
+    display: flex; /* Показати модальне вікно */
+}
+
+
+.modal-content {
+    position: absolute;  /* або fixed, якщо хочеш, щоб він залишався на місці під час прокрутки */
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 100vh; /* 100% висоти вікна */
+    background-color: lightgray; /* Для візуалізації */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    position: fixed; /* Div будет "прилипать" к экрану */
+    z-index: 9999; /* Максимальное значение z-индекса */}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+#orderList {
+    margin: 1rem 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-item button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.order-item button:hover {
+    background-color: #c82333;
+}
+
+
+
+.slide-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 600px;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#prevSlide, #nextSlide {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Positioning the previous button (left) */
+#prevSlide {
+    left: 5%; /* Adjust for better alignment */
+    transform: translate(0, -50%);
+}
+
+/* Positioning the next button (right) */
+#nextSlide {
+    right: 5%; /* Adjust for better alignment */
+    transform: translate(0, -50%);
+}
+
+
+.product-list {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product {
+    position: relative;
+    margin: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    background-color: white; /* Початковий колір фону */
+    transition: background-color 0.3s ease;
+}
+
+.product-card{
+    width: 320px;
+    height: 260px;
+}
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product:hover img,
+.product:hover h3,
+.product:hover p,
+.product:hover .order-btn {
+    opacity: 0; /* Приховати всі елементи при наведенні */
+    visibility: hidden; /* Додатково приховати елементи */
+}
+
+.product h3 {
+    margin: 0.5rem 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.order-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.order-btn:hover {
+    background-color: #0056b3;
+}
+.product:hover {
+    :url(./test1.png);
+    background-size: cover; /* Розтягнути зображення на весь блок */
+            background-position: center; /* Центрувати зображення */
+}
+/* Стилі для секції з деталями товару */
+.product-detail {
+
+}
+
+.product-detail-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-detail p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-detail .order-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.product-detail .order-btn:hover {
+    background-color: #0056b3;
+}
+/* ✅ Загальні стилі */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Контейнер товару */
+.product-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+}
+
+/* ✅ Уявний контейнер для зображення */
+.product-image {
+    width: 400px;
+    height: 500px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #777;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ✅ Інформація про товар */
+.product-info {
+    flex: 1;
+    text-align: left;
+}
+
+.product-info h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* ✅ Таблиця з характеристиками */
+.product-meta p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* ✅ Блок ціни та кнопки */
+.product-purchase {
+    margin-top: 20px;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/* Контейнер для фото */
+.product-image {
+    width: 100%;
+    max-width: 400px; /* Максимальна ширина */
+    height: 500px; /* Фіксована висота */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Обрізає зайве */
+    border: 2px solid #ddd; /* Рамка */
+    border-radius: 8px;
+    background-color: #f4f4f4; /* Фон, якщо фото не завантажиться */
+}
+
+/* Фото всередині контейнера */
+.product-image img {
+    max-width: 100%; /* Не виходить за межі контейнера */
+    max-height: 100%; /* Обмежує висоту */
+    object-fit: contain; /* Вписує зображення всередину рамки без обрізання */
+    border-radius: 8px;
+}
+
+
+.btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* ✅ Інформація про оплату */
+.payment-info {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* ✅ Адаптивність */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .product-image {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+    }
+    .btn {
+        width: auto;
+    }
+}

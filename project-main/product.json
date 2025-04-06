@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Продукт 1",
+        "city": "Київ",
+        "price": 100,
+        "description": "Опис продукту 1",
+        "image": "product1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Продукт 2",
+        "city": "Львів",
+        "price": 150,
+        "description": "Опис продукту 2",
+        "image": "product2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Продукт 3",
+        "city": "Одеса",
+        "price": 200,
+        "description": "Опис продукту 3",
+        "image": "product3.jpg"
+    }
+]

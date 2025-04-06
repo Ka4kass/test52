@@ -1,0 +1,159 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Оформлення замовлення</title>
+        <link rel="stylesheet" href="./css/checkout.css">
+        <link rel="stylesheet" href="./css/main.css">
+
+        <script defer src="checkout.js"></script>
+    </head>
+    <body>
+
+        <!-- ✅ Фіксований хедер -->
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <a href="test.html" class="logo">Versity</a>
+                    <button class="nav-toggle">☰</button>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Produkte</a></li>
+                            <li><a href="regions.html">Regionen</a></li>
+                            <li><a href="#about">Über uns</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+    
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- ✅ Основний контейнер -->
+        <div class="checkout-wrapper">
+            <div class="checkout-container">
+                <h1>1. Shipping Address</h1>
+
+                <div class="order-summary">
+                    <h3>Your Order</h3>
+                    <ul id="order-items">
+                        <!-- Товари будуть додані через JavaScript -->
+                    </ul>
+                    <p class="total-amount">Total: <span id="total-price">$0.00</span></p>
+                </div>
+                <h1 class="checkout">2. Shipping Address</h1>
+
+                <!-- ✅ Блок для відображення товарів та суми замовлення -->
+                
+
+                <form id="checkoutForm">
+                    <div class="form-row">
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" id="company" name="company" placeholder="Company (optional)">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone - for courier" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" id="address1" name="address1" placeholder="Address line 1" required>
+                        <input type="text" id="address2" name="address2" placeholder="Address line 2 (optional)">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" id="city" name="city" placeholder="City" required>
+                        <select id="state" name="state">
+                            <option value="">State, Province,...</option>
+                            <option value="Berlin">Berlin</option>
+                            <option value="Bavaria">Bavaria</option>
+                            <option value="Hamburg">Hamburg</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" id="postal-code" name="postal-code" placeholder="Postal code" required>
+                        <select id="country" name="country">
+                            <option value="">Select a country</option>
+                            <option value="Austria">🇦🇹 Austria</option>
+                            <option value="Belgium">🇧🇪 Belgium</option>
+                            <option value="Bulgaria">🇧🇬 Bulgaria</option>
+                            <option value="France">🇫🇷 France</option>
+                            <option value="Germany" selected>🇩🇪 Germany</option>
+                            <option value="Italy">🇮🇹 Italy</option>
+                            <option value="Poland">🇵🇱 Poland</option>
+                            <option value="Spain">🇪🇸 Spain</option>
+                            <option value="Switzerland">🇨🇭 Switzerland</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="differentBilling">
+                        <label for="differentBilling">Use a different billing address</label>
+                    </div>
+
+                    <!-- ✅ Вибір способу оплати -->
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method" class="payment-select">
+                            <option value="card">💳 Credit/Debit Card</option>
+                            <option value="paypal">🅿️ PayPal</option>
+                            <option value="stripe">💲 Stripe</option>
+                            <option value="applepay">🍏 Apple Pay</option>
+                            <option value="googlepay">🤖 Google Pay</option>
+                            <option value="crypto">₿ Cryptocurrency</option>
+                            <option value="bank">🏦 Bank Transfer</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn" id="checkoutButton">Continue to Payment</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>Versity</h3>
+                        <p>Hochwertige 3D-Modelle deutscher Architektur für Ihre kreativen Projekte.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Produkte</a></li>
+                            <li><a href="regions.html">Regionen</a></li>
+                            <li><a href="#about">Über uns</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Kundenservice</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Versand</a></li>
+                            <li><a href="#">Rückgaben</a></li>
+                            <li><a href="#">Zahlungsmethoden</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Kontakt</h3>
+                        <ul>
+                            <li>Email: info@versity.de</li>
+                            <li>Telefon: +49 30 1234567</li>
+                            <li>Adresse: Musterstraße 123, Berlin</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+
+        <script src="./js/checkout.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+    </body>
+    </html>

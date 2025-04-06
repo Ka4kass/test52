@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="page.css">
+    <script src="page.js" defer></script>
+</head>
+<body>
+    <header class="container">
+        <nav class="main-nav">
+            <a href="./main.html" class="logo-primary">SviatikBos</a>
+            <ul class="site-nav list">
+                <li class="item"><a href="./modal.html" class="link active">Bebra</a></li>
+                <li class="item"><a href="./modal.html" class="link">Bebra</a></li>
+                <li class="item"><a href="./modal.html" class="link">Bebera</a></li>
+            </ul>
+            <div class="order-icon">
+                <img id="openModal" class="icon" src="./order.svg" alt="Order Icon">
+                <span id="orderCount" class="order-count">0і</span>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <!-- 🔴 Кнопка закриття -->
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>Ваші замовлення</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <!-- 🛒 Кнопки управління -->
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Перейти до оформлення</button>
+                <button id="clearOrders" class="btn btn-danger">Очистити кошик</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <section class="container">
+        <div class="slide-wrapper">
+            <div class="slider">
+                <img class="slide" src="./test2.png" alt="Slide 1">
+                <img class="slide" src="./test2.png" alt="Slide 2">
+                <img class="slide" src="./test2.png" alt="Slide 3">
+            </div>
+            <div class="slider-nav">
+                <button id="prevSlide">&#10094;</button>
+                <button id="nextSlide">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    <!-- Product List Section -->
+    <section class="product-list">
+        <h2>3D Models for Sale</h2>
+
+    </div>
+    <div class="products">
+        <a href="./product.html?name=Model%201&city=Lviv&price=50">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 1">
+                <h3>Model 1</h3>
+                <p>$50</p>
+            </div>
+        </a>
+    
+        <a href="./product.html?name=Model%202&city=Kyiv&price=70">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 2">
+                <h3>Model 2</h3>
+                <p>$70</p>
+            </div>
+        </a>
+    
+        <a href="./product.html?name=Model%203&city=Odesa&price=100">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 3">
+                <h3>Model 3</h3>
+                <p>$100.00</p>
+            </div>
+        </a>
+    </div>
+    <div class="products">
+        <a href="./product.html?name=Model%201&city=Lviv&price=50">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 1">
+                <h3>Model 1</h3>
+                <p>$50</p>
+            </div>
+        </a>
+    
+        <a href="./product.html?name=Model%202&city=Kyiv&price=70">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 2">
+                <h3>Model 2</h3>
+                <p>$70</p>
+            </div>
+        </a>
+    
+        <a href="./product.html?name=Model%203&city=Odesa&price=100">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 3">
+                <h3>Model 3</h3>
+                <p>$100.00</p>
+            </div>
+        </a>
+    </div>
+    <div class="products">
+        <a href="./product.html?name=Model%201&city=Lviv&price=50">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 1">
+                <h3>Model 1</h3>
+                <p>$50</p>
+            </div>
+        </a>
+    
+        <a href="./product.html?name=Model%202&city=Kyiv&price=70">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 2">
+                <h3>Model 2</h3>
+                <p>$70</p>
+            </div>
+        </a>
+    
+        <a href="./product.html?name=Model%203&city=Odesa&price=100">
+            <div class="product">
+                <img src="./model3.jpg" alt="Model 3">
+                <h3>Model 3</h3>
+                <p>$100.00</p>
+            </div>
+        </a>
+    </div>
+    
+    </div>
+    
+    
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const orderList = document.getElementById("orderList");
+            const clearOrdersButton = document.getElementById("clearOrders");
+    
+            function updateOrderList() {
+                const orders = JSON.parse(localStorage.getItem("orders")) || [];
+                orderList.innerHTML = "";
+    
+                orders.forEach((order, index) => {
+                    const orderItem = document.createElement("div");
+                    orderItem.innerHTML = `
+                        <span>${index + 1}. ${order.name} (${order.city}) - $${order.price.toFixed(2)}</span>
+                        <button onclick="removeOrder(${index})">Видалити</button>
+                    `;
+                    orderList.appendChild(orderItem);
+                });
+            }
+    
+            window.removeOrder = function (index) {
+                let orders = JSON.parse(localStorage.getItem("orders")) || [];
+                orders.splice(index, 1);
+                localStorage.setItem("orders", JSON.stringify(orders));
+                updateOrderList();
+            };
+    
+            if (clearOrdersButton) {
+                clearOrdersButton.addEventListener("click", () => {
+                    localStorage.removeItem("orders");
+                    updateOrderList();
+                });
+            }
+    
+            updateOrderList();
+        });
+    </script>
+    
+    
+    </div>
+</section>
+    <script src="modal.js"></script>
+    <script src="slider.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

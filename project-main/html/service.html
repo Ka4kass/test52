@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versity - 3D Modelle</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="test.html" class="logo">Versity</a>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="test.html">Home</a></li>
+                        <li><a href="stadt.html">Produkte</a></li>
+                        <li><a href="regionen.html">Regionen</a></li>
+                        <li><a href="about.html">About</a></li>
+
+
+                    </ul>
+                </nav>
+                <div class="order-icon">
+                    <img id="openModal" class="icon" src="./shopping-bag.png" alt="Order Icon">
+                    <span id="orderCount" class="order-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>Ihr Warenkorb</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Zur Kasse</button>
+                <button id="clearOrders" class="btn btn-danger">Warenkorb leeren</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="kundenservice-container">
+        <div class="kundenservice-header">
+            <h1>Kundenservice</h1>
+            <p>Wir sind für Sie da! Hier finden Sie Antworten auf häufig gestellte Fragen und Informationen zu unseren Service-Leistungen. Sollten Sie weitere Fragen haben, zögern Sie nicht, uns zu kontaktieren.</p>
+        </div>
+
+        <div class="kundenservice-nav">
+            <button class="active" data-section="faq">FAQ</button>
+            <button data-section="versand">Versand</button>
+            <button data-section="rueckgaben">Rückgaben</button>
+            <button data-section="zahlungsmethoden">Zahlungsmethoden</button>
+        </div>
+
+        <div class="kundenservice-content">
+            <!-- FAQ Section -->
+            <div id="faq" class="kundenservice-section active">
+                <h2>Häufig gestellte Fragen</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Wie sind die 3D-Modelle von Versity beschaffen?</div>
+                    <div class="faq-answer">
+                        Unsere 3D-Modelle sind hochwertige digitale Nachbildungen bekannter deutscher Wahrzeichen und Architektur. Sie werden von professionellen 3D-Künstlern mit Liebe zum Detail erstellt und sind für verschiedene Anwendungen geeignet, wie Architekturvisualisierungen, Bildungsressourcen oder Sammlerstücke.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">In welchen Formaten werden die 3D-Modelle geliefert?</div>
+                    <div class="faq-answer">
+                        Unsere 3D-Modelle werden in den gängigsten Formaten bereitgestellt, darunter .obj, .fbx, .stl und .blend. Wenn Sie ein bestimmtes Format benötigen, das nicht aufgeführt ist, kontaktieren Sie uns bitte, und wir werden versuchen, Ihnen zu helfen.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Kann ich die 3D-Modelle für kommerzielle Zwecke verwenden?</div>
+                    <div class="faq-answer">
+                        Ja, alle unsere Standardmodelle werden mit einer kommerziellen Lizenz geliefert. Sie können die Modelle für Ihre persönlichen und geschäftlichen Projekte verwenden. Für umfangreiche kommerzielle Nutzung oder Massenproduktion empfehlen wir jedoch, unsere erweiterte Lizenz zu erwerben.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Wie erhalte ich meine gekauften 3D-Modelle?</div>
+                    <div class="faq-answer">
+                        Nach Abschluss des Kaufs erhalten Sie sofortigen Zugang zu Ihren 3D-Modellen. Sie können die Dateien direkt von unserer Website herunterladen oder den Download-Link in der Bestätigungs-E-Mail verwenden. Die Dateien stehen Ihnen für 30 Tage zum Download zur Verfügung.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Kann ich individuelle 3D-Modelle anfragen?</div>
+                    <div class="faq-answer">
+                        Ja, wir bieten maßgeschneiderte 3D-Modellierungsdienste an. Wenn Sie ein spezifisches Gebäude oder eine Architektur haben, die Sie als 3D-Modell erstellen lassen möchten, kontaktieren Sie uns bitte unter info@versity.de mit Ihren Anforderungen, und wir werden Ihnen ein individuelles Angebot unterbreiten.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Gibt es Rabatte für den Kauf mehrerer Modelle?</div>
+                    <div class="faq-answer">
+                        Ja, wir bieten Mengenrabatte für den Kauf mehrerer Modelle an. Ab 3 Modellen erhalten Sie 10% Rabatt, ab 5 Modellen 15% Rabatt und ab 10 Modellen 20% Rabatt. Die Rabatte werden automatisch im Warenkorb angewendet.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Versand Section -->
+            <div id="versand" class="kundenservice-section">
+                <h2>Versandinformationen</h2>
+                
+                <p>Bei Versity bieten wir verschiedene Versandoptionen an, um Ihren Bedürfnissen und Zeitplänen gerecht zu werden. Bitte beachten Sie, dass unsere 3D-Modelle als digitale Downloads bereitgestellt werden und keine physische Lieferung erfordern.</p>
+                
+                <div class="shipping-options">
+                    <div class="shipping-option">
+                        <h3>Digitaler Download</h3>
+                        <p>Nach Zahlungsbestätigung erhalten Sie sofortigen Zugriff auf Ihre gekauften 3D-Modelle.</p>
+                        <span class="price">
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>Versity</h3>
+                        <p>Hochwertige 3D-Modelle deutscher Architektur für Ihre kreativen Projekte.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Produkte</a></li>
+                            <li><a href="regions.html">Regionen</a></li>
+                            <li><a href="#about">Über uns</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Kundenservice</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Versand</a></li>
+                            <li><a href="#">Rückgaben</a></li>
+                            <li><a href="#">Zahlungsmethoden</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Kontakt</h3>
+                        <ul>
+                            <li>Email: info@versity.de</li>
+                            <li>Telefon: +49 30 1234567</li>
+                            <li>Adresse: Musterstraße 123, Berlin</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="modal.js"></script>
+        <script src="slider.js"></script>
+        <script src="script.js"></script>
+        <script src="js/icon.js"></script>
+    ^
+    
+    
+    
+    
+        <script>
+           

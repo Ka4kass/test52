@@ -1,0 +1,219 @@
+/* ✅ Загальні стилі */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+.checkout-text{
+    font-size: 30px;
+}
+
+/* ✅ Хедер (ФІКСОВАНИЙ ВЕРХ) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f8f9fa;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Навігація */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ✅ Логотип */
+.logo-primary {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ✅ Меню */
+.site-nav {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.site-nav .item .link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.site-nav .item .link:hover,
+.site-nav .item .link.active {
+    color: #ffcc00;
+}
+
+/* ✅ Іконка кошика */
+.order-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.icon {
+    width: 30px;
+    cursor: pointer;
+}
+/* ✅ Глобальні стилі */
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #f8f9fa;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ✅ Контейнер, щоб сторінка не була на всю ширину */
+.checkout-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ✅ Основний контейнер */
+.checkout-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+    margin-top: 80px;
+}
+
+/* ✅ Поля форми */
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-row input, .form-row select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* ✅ Чекбокс */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+/* ✅ Кнопка */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* ✅ Адаптивність */
+@media (max-width: 768px) {
+    .checkout-container {
+        width: 95%;
+    }
+}
+/* ✅ Контейнер для вибору методу оплати */
+.form-group {
+    margin-top: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* ✅ Випадаючий список */
+.payment-select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+/* ✅ При фокусі */
+.payment-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+/* ✅ Блок з товаром та підсумковою сумою */
+.order-summary {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.order-summary h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#order-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#order-items li {
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #007bff;
+}

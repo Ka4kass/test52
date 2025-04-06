@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versity - Über uns</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<style>
+    .faq-answer {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.faq-question {
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="test.html" class="logo">Versity</a>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="test.html">Home</a></li>
+                        <li><a href="stadt.html">Städte</a></li>
+                        <li><a href="regionen.html">Bundesländer</a></li>
+                        <li><a href="about.html">About</a></li>
+
+
+                    </ul>
+                </nav>
+                <div class="order-icon">
+                    <img id="openModal" class="icon" src="img/shopping-bag.png" alt="Order Icon">
+                    <span id="orderCount" class="order-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>Ihr Warenkorb</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Zur Kasse</button>
+                <button id="clearOrders" class="btn btn-danger">Warenkorb leeren</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>deine bestellungen</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Перейти до оформлення</button>
+                <button id="clearOrders" class="btn btn-danger">Очистити кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="section-title">Über Versity</h1>
+            <p class="subtitle">Deutschlands Architektur in detaillierten 3D-Modellen</p>
+        </div>
+    </section>
+
+    <!-- Main About Content -->
+    <section class="container">
+        <div class="about">
+            <div class="about-content">
+                <h2>Unsere Geschichte</h2>
+                <p>Versity wurde 2022 von einer Gruppe von Architekten, 3D-Künstlern und Kulturhistorikern gegründet, die eine gemeinsame Leidenschaft für deutsche Architektur und deren Erhaltung in digitaler Form teilen.</p>
+                <p>Was als kleines Projekt begann, ist heute zu einem umfassenden Katalog von über 200 detailgetreuen 3D-Modellen architektonischer Wahrzeichen aus ganz Deutschland gewachsen.</p>
+            </div>
+            <div class="about-image">
+                <img src="./photo_2025-03-12_22-34-28.jpg" alt="Versity Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="container">
+        <div class="about-section">
+            <h2 class="section-title">Unsere Mission</h2>
+            <div class="mission-columns">
+                <div class="mission-column">
+                    <h3>Bewahrung des Kulturerbes</h3>
+                    <p>Wir sehen unsere Arbeit als Beitrag zur digitalen Bewahrung des architektonischen Erbes Deutschlands. Jedes unserer Modelle wird mit Liebe zum Detail erstellt, um die einzigartige Geschichte und den Charakter jedes Bauwerks zu bewahren.</p>
+                </div>
+                <div class="mission-column">
+                    <h3>Förderung der regionalen Vielfalt</h3>
+                    <p>Deutschland ist bekannt für seine reiche regionale Vielfalt in der Architektur. Von norddeutscher Backsteingotik bis zu süddeutschen Barockkirchen – wir möchten diese Vielfalt feiern und für die Nachwelt dokumentieren.</p>
+                </div>
+                <div class="mission-column">
+                    <h3>Inspiration für Kreative</h3>
+                    <p>Unsere Modelle dienen nicht nur als digitale Kopien, sondern auch als Inspirationsquelle für Architekten, Designer, Künstler und alle, die die deutsche Baukunst schätzen und in ihre eigenen kreativen Projekte einfließen lassen möchten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="container">
+        <div class="process-section">
+            <h2 class="section-title">Unser Prozess</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Recherche</h3>
+                    <p>Jedes Projekt beginnt mit gründlicher Recherche zur Geschichte, Architektur und kulturellen Bedeutung des Bauwerks. Wir arbeiten mit Historikern und lokalen Experten zusammen, um authentische Details zu sammeln.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Modellierung</h3>
+                    <p>Unsere 3D-Künstler erstellen detaillierte digitale Modelle unter Verwendung modernster Technologien. Jeder Winkel und jedes architektonische Element wird sorgfältig nachgebildet.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Texturierung</h3>
+                    <p>Die Texturierung verleiht unseren Modellen Leben und Authentizität. Wir verwenden hochauflösende Texturen, die auf Basis von realen Materialien und Oberflächen erstellt werden.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Qualitätskontrolle</h3>
+                    <p>Jedes Modell durchläuft einen strengen Qualitätskontrollprozess, bei dem wir die historische Genauigkeit und technische Qualität überprüfen, bevor es in unseren Katalog aufgenommen wird.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container">
+        <div class="team-section">
+            <h2 class="section-title">Unser Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="/api/placeholder/200/200" alt="Team Member 1">
+                    <h3>Markus Weber</h3>
+                    <p class="member-title">Gründer & Kreativdirektor</p>
+                    <p>Architekt mit über 15 Jahren Erfahrung in der digitalen Denkmalpflege und 3D-Modellierung.</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/200/200" alt="Team Member 2">
+                    <h3>Julia Schmidt</h3>
+                    <p class="member-title">Leitende 3D-Künstlerin</p>
+                    <p>Spezialistin für fotorealistische Texturen und Materialien mit Hintergrund in der Produktvisualisierung.</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/200/200" alt="Team Member 3">
+                    <h3>Thomas Müller</h3>
+                    <p class="member-title">Architekturhistoriker</p>
+                    <p>Doktor der Architekturgeschichte mit Fokus auf deutschen Regionalstilen vom Mittelalter bis zur Moderne.</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/200/200" alt="Team Member 4">
+                    <h3>Laura Becker</h3>
+                    <p class="member-title">Technische Leiterin</p>
+                    <p>Ingenieurin mit Expertise in 3D-Druck und digitaler Fertigung für Architekturmodelle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="container">
+        <div class="partners-section">
+            <h2 class="section-title">Unsere Partner</h2>
+            <p class="partners-intro">Wir arbeiten mit führenden Institutionen und Organisationen zusammen, um die Qualität und historische Genauigkeit unserer Modelle zu gewährleisten.</p>
+            <div class="partners-logos">
+                <div class="partner-logo">
+                    <img src="/api/placeholder/150/80" alt="Deutsche Stiftung Denkmalschutz">
+                    <p>Deutsche Stiftung Denkmalschutz</p>
+                </div>
+                <div class="partner-logo">
+                    <img src="/api/placeholder/150/80" alt="Deutsches Architekturmuseum">
+                    <p>Deutsches Architekturmuseum</p>
+                </div>
+                <div class="partner-logo">
+                    <img src="/api/placeholder/150/80" alt="Bauhaus Archiv">
+                    <p>Bauhaus Archiv</p>
+                </div>
+                <div class="partner-logo">
+                    <img src="/api/placeholder/150/80" alt="TU München">
+                    <p>TU München</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Customer Service Sections -->
+
+<!-- Product FAQ Section -->
+<section class="container" id="faq">
+    <div class="service-section faq-section">
+        <h2 class="section-title">Produkt FAQ</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-question">Wie detailliert sind die 3D-gedruckten Modelle?</h3>
+                <div class="faq-answer">
+                    <p>Unsere 3D-gedruckten Architekturmodelle werden mit höchster Präzision hergestellt und enthalten alle wesentlichen architektonischen Elemente. Die genaue Detailstufe ist auf jeder Produktseite angegeben und variiert je nach Maßstab des Modells.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Welche Materialien werden für den 3D-Druck verwendet?</h3>
+                <div class="faq-answer">
+                    <p>Wir verwenden hochwertige Materialien wie PLA, PETG und Resin für unsere Modelle. Jedes Material hat eigene Vorteile in Bezug auf Detailgenauigkeit, Stabilität und Oberflächenqualität. Die Materialspezifikationen sind auf jeder Produktseite aufgeführt.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Sind die Modelle farbig oder muss ich sie selbst bemalen?</h3>
+                <div class="faq-answer">
+                    <p>Unsere Standardmodelle werden in Einzelfarben gedruckt (weiß, grau, schwarz oder terrakotta). Premium-Modelle sind in vollfarbigem 3D-Druck erhältlich. Auf Wunsch bieten wir auch professionelle Bemalung an oder liefern die Modelle unbehandelt zum Selbstbemalen.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Kann ich ein Modell in einem bestimmten Maßstab bestellen?</h3>
+                <div class="faq-answer">
+                    <p>Ja, wir bieten Modelle in verschiedenen Standardmaßstäben an (1:100, 1:200, 1:500). Für individuelle Maßstäbe oder Sonderanfertigungen kontaktieren Sie bitte unseren Kundenservice. Bitte beachten Sie, dass benutzerdefinierte Maßstäbe die Produktionszeit verlängern können.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shipping Section -->
+<section class="container" id="shipping">
+    <div class="service-section shipping-section">
+        <h2 class="section-title">Versand</h2>
+        <div class="service-content">
+            <div class="service-info">
+                <h3>Lieferzeiten</h3>
+                <p>Unsere 3D-gedruckten Modelle werden nach Bestelleingang individuell hergestellt. Die Produktionszeit beträgt in der Regel 3-5 Werktage. Der Versand innerhalb Deutschlands dauert anschließend 1-3 Werktage. Internationale Lieferungen können je nach Zielland 5-10 zusätzliche Werktage in Anspruch nehmen.</p>
+                
+                <h3>Versandkosten</h3>
+                <ul>
+                    <li>Standardversand (Deutschland): 6,95 €</li>
+                    <li>Expressversand (Deutschland): 12,95 €</li>
+                    <li>EU-Versand: 14,95 €</li>
+                    <li>Internationaler Versand: ab 24,95 €</li>
+                </ul>
+                
+                <h3>Spezialverpackung</h3>
+                <p>Alle unsere Modelle werden in einer speziellen stoßdämpfenden Verpackung verschickt, um Beschädigungen während des Transports zu vermeiden. Für besonders große oder fragile Modelle verwenden wir verstärkte Holzkisten, für die eine zusätzliche Gebühr anfallen kann.</p>
+                
+                <h3>Versandverfolgung</h3>
+                <p>Für alle Sendungen erhalten Sie automatisch eine Tracking-Nummer, mit der Sie den Status Ihrer Bestellung verfolgen können. Bei Fragen zum Versandstatus kontaktieren Sie bitte unseren Kundenservice.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Returns Section -->
+<section class="container" id="return">
+    <div class="service-section returns-section">
+        <h2 class="section-title">Rückgaben</h2>
+        <div class="service-content">
+            <div class="service-info">
+                <h3>Rückgaberecht</h3>
+                <p>Für unsere 3D-gedruckten Modelle gilt das gesetzliche Widerrufsrecht von 14 Tagen ab Erhalt der Ware. Bitte beachten Sie, dass die Produkte in unbeschädigtem Zustand und in der Originalverpackung zurückgesendet werden müssen.</p>
+                
+                <h3>Sonderanfertigungen</h3>
+                <p>Bitte beachten Sie, dass für individuell angefertigte Modelle nach Ihren Spezifikationen (Maßstabsänderungen, Farbwünsche, etc.) kein Rückgaberecht besteht, es sei denn, das Produkt ist beschädigt oder entspricht nicht den vereinbarten Spezifikationen.</p>
+                
+                <h3>Beschädigte oder fehlerhafte Produkte</h3>
+                <p>Sollten Sie ein beschädigtes oder fehlerhaftes Produkt erhalten, kontaktieren Sie uns bitte innerhalb von 48 Stunden nach Erhalt mit Fotos des Problems. Wir werden umgehend für Ersatz sorgen oder eine Rückerstattung veranlassen.</p>
+                
+                <h3>Rücksendeprozess</h3>
+                <ol>
+                    <li>Kontaktieren Sie unseren Kundenservice per E-Mail oder Telefon</li>
+                    <li>Füllen Sie das Rücksendeformular aus (liegt jeder Bestellung bei)</li>
+                    <li>Verpacken Sie das Modell sorgfältig in der Originalverpackung</li>
+                    <li>Senden Sie das Paket an die angegebene Rücksendeadresse</li>
+                </ol>
+                
+                <p>Die Kosten für die Rücksendung trägt der Kunde, es sei denn, das Produkt ist beschädigt oder fehlerhaft.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Payment Methods Section -->
+<section class="container" id="payment">
+    <div class="service-section payment-section">
+        <h2 class="section-title">Zahlungsmethoden</h2>
+        <div class="service-content">
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <img src="/api/placeholder/80/50" alt="Kreditkarte">
+                    <h3>Kreditkarte</h3>
+                    <p>Wir akzeptieren alle gängigen Kreditkarten (Visa, MasterCard, American Express). Die Belastung erfolgt erst bei Versand Ihres Modells.</p>
+                </div>
+                <div class="payment-method">
+                    <img src="/api/placeholder/80/50" alt="PayPal">
+                    <h3>PayPal</h3>
+                    <p>Schnell und sicher bezahlen mit PayPal. Ihre Zahlung wird bei Beginn der Produktion Ihres Modells abgebucht.</p>
+                </div>
+                <div class="payment-method">
+                    <img src="/api/placeholder/80/50" alt="Überweisung">
+                    <h3>Banküberweisung</h3>
+                    <p>Zahlung per Vorkasse auf unser Bankkonto. Bitte beachten Sie, dass die Produktion erst nach Zahlungseingang beginnt, was 2-3 Werktage dauern kann.</p>
+                </div>
+                <div class="payment-method">
+                    <img src="/api/placeholder/80/50" alt="Klarna">
+                    <h3>Klarna</h3>
+                    <p>Flexible Zahlungsoptionen mit Klarna: Sofort bezahlen, später bezahlen oder in Raten bezahlen. Verfügbar für Bestellungen ab 50 €.</p>
+                </div>
+            </div>
+            
+            <div class="payment-security">
+                <h3>Anzahlung bei großen Modellen</h3>
+                <p>Für besonders große oder komplexe Modelle mit einem Wert über 500 € behalten wir uns vor, eine Anzahlung von 30% zu verlangen. Die Restzahlung erfolgt vor dem Versand des fertigen Modells.</p>
+                
+                <h3>Währung</h3>
+                <p>Alle Preise sind in Euro (€) angegeben. Für internationale Kunden kann je nach Zahlungsmethode eine Umrechnung in die lokale Währung erfolgen.</p>
+                
+                <h3>Sicherheit</h3>
+                <p>Alle Zahlungen auf unserer Website sind durch SSL-Verschlüsselung geschützt. Ihre Zahlungsdaten werden zu keinem Zeitpunkt auf unseren Servern gespeichert und nach höchsten Sicherheitsstandards verarbeitet.
+
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Form Section -->
+    <section class="container">
+        <div class="contact-section">
+            <h2 class="section-title">Kontaktieren Sie uns</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Versity GmbH</h3>
+                    <p><strong>Adresse:</strong> Musterstraße 123, 10115 Berlin</p>
+                    <p><strong>Telefon:</strong> +49 30 1234567</p>
+                    <p><strong>Email:</strong> info@versity.de</p>
+                    <p><strong>Öffnungszeiten:</strong><br>
+                       Montag - Freitag: 9:00 - 18:00 Uhr<br>
+                       Samstag: 10:00 - 14:00 Uhr<br>
+                       Sonntag: Geschlossen</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Betreff</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Versity</h3>
+                    <p>Hochwertige 3D-Modelle deutscher Architektur für Ihre kreativen Projekte.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="test.html">Home</a></li>
+                        <li><a href="stadt.html">Produkte</a></li>
+                        <li><a href="regionen.html">Regionen</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundenservice</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Versand</a></li>
+                        <li><a href="#">Rückgaben</a></li>
+                        <li><a href="#">Zahlungsmethoden</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li>Email: info@versity.de</li>
+                        <li>Telefon: +49 30 1234567</li>
+                        <li>Adresse: Musterstraße 123, Berlin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+    
+        faqItems.forEach(item => {
+            const question = item.querySelector(".faq-question");
+            const answer = item.querySelector(".faq-answer");
+    
+            // Start with answers hidden
+            answer.style.display = "none";
+    
+            question.addEventListener("click", () => {
+                const isOpen = answer.style.display === "block";
+                answer.style.display = isOpen ? "none" : "block";
+            });
+        });
+    });
+    </script>
+    
+    
+    
+<script src="js/modal.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/script.js"></script>
+<script src="js/icon.js"></script>
+</html>

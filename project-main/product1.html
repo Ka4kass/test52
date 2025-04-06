@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деталі продукту</title>
+</head>
+<body>
+    <h1>Деталі продукту</h1>
+    <div>
+        <h2 id="product-name"></h2>
+        <p id="product-description"></p>
+        <p id="product-city"></p>
+        <p id="product-price"></p>
+        <button id="orderProduct">Додати в кошик</button>
+    </div>
+
+    <div id="orderModal" style="display:none;">
+        <p id="modal-product-name"></p>
+        <p id="modal-product-price"></p>
+        <button id="closeModal">Закрити</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+            if (!selectedProduct) return;
+
+            document.getElementById("product-name").textContent = selectedProduct.name;
+            document.getElementById("product-description").textContent = selectedProduct.description;
+            document.getElementById("product-city").textContent = `Місто: ${selectedProduct.city}`;
+            document.getElementById("product-price").textContent = `$${selectedProduct.price}`;
+
+            const orderButton = document.getElementById("orderProduct");
+            orderButton.setAttribute("data-name", selectedProduct.name);
+            orderButton.setAttribute("data-price", selectedProduct.price);
+            
+            orderButton.addEventListener("click", function() {
+                const product = {
+                    name: selectedProduct.name,
+                    price: selectedProduct.price,
+                    city: selectedProduct.city
+                };
+
+                let orders = JSON.parse(localStorage.getItem("orders")) || [];
+                orders.push(product);
+                localStorage.setItem("orders", JSON.stringify(orders));
+
+                openModal(product.name, product.price);
+            });
+        });
+
+        function openModal(productName, productPrice) {
+            const orderModal = document.getElementById("orderModal");
+            document.getElementById("modal-product-name").textContent = productName;
+            document.getElementById("modal-product-price").textContent = `$${productPrice.toFixed(2)}`;
+
+            orderModal.style.display = "block";
+        }
+
+        document.getElementById("closeModal")?.addEventListener("click", function() {
+            const orderModal = document.getElementById("orderModal");
+            orderModal.style.display = "none";
+        });
+    </script>
+</body>
+</html>

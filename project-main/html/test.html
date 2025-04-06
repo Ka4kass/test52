@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versity - 3D Modelle</title>
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="test.html" class="logo">Versity</a>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="test.html">Home</a></li>
+                        <li><a href="stadt.html">Städte</a></li>
+                        <li><a href="regionen.html">Bundesländer</a></li>
+                        <li><a href="about.html">About</a></li>
+
+
+                    </ul>
+                </nav>
+                <div class="order-icon">
+                    <img id="openModal" class="icon" src="img/shopping-bag.png" alt="Order Icon">
+                    <span id="orderCount" class="order-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Shopping Cart Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>Ihr Warenkorb</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Zur Kasse</button>
+                <button id="clearOrders" class="btn btn-danger">Warenkorb leeren</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page Content -->
+    <div id="home-page" style="display: block;">
+        <!-- Hero Section -->
+        <section class="">
+            <div class="slide-wrapper">
+                <div class="slider">
+                    <img class="slide" src="./img/test2.jpg" alt="Slide 1">
+                    <img class="slide" src="./test2.png" alt="Slide 2">
+                    <img class="slide" src="./test2.png" alt="Slide 3">
+                </div>
+                <div class="slider-nav">
+                    <button id="prevSlide">&#10094;</button>
+                    <button id="nextSlide">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        
+        <div class="container">
+            <h1 class="hallo-text">Hi, Hallo, Servus</h1>
+            <p>Explore our beautifully illustrated books and kits celebrating the modernist and brutalist architecture of the former Eastern Bloc and beyond, in a unique and playful way.</p>
+          </div>
+
+        <!-- Products Preview Section -->
+        <section class="container products-preview">
+            <h2 class="section-title">Neueste Modelle</h2>
+            <div class="product-grid">
+                <a href="product.html?name=Frauenkirche&city=&price=89.99">
+                    <div class="product-card">
+                        <img src="./img/test.jpg" alt="Berliner Fernsehturm">
+                        <div class="product-card-content">
+                            <h3>Berliner Fernsehturm</h3>
+                            <p>Berlin</p>
+                            <span class="price">€89,99</span>
+                        </div>
+                    </div>
+                    <p>Rivne</p>
+
+                </a>
+                
+                
+                    <a href="./product.html?name=Model%202&city=Kyiv&price=70">
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Kölner Dom">
+                    <div class="product-card-content">
+                        <h3>Kölner Dom</h3>
+                        <span class="price">€129,99</span>
+                    </div>
+                </div>
+            </a>
+            <a href="./product.html?name=Model%203&city=Odesa&price=100">
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+            </a>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Münchner Marienplatz">
+                    <div class="product-card-content">
+                        <h3>Marienplatz</h3>
+                        <p>München</p>
+                        <span class="price">€79,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <a href="stadt.html" class="product-card">
+                    <div class="shop-box">
+                        <span class="plus-icon">+</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Regions Preview Section -->
+        <section class="container regions-preview">
+            <h2 class="section-title">Regionen</h2>
+            <div class="regions-grid">
+                <a href="cities.html?region=Bayern" class="region-card">
+                    <h2>Bayern</h2>
+                <div class="region-card">
+                    <img src="/api/placeholder/400/500" alt="Bayern">
+                    <div class="region-card-content">
+                        <h3>Bayern</h3>
+                        <p>12 Modelle verfügbar</p>
+                    </div>
+                </div>
+                </a>
+                <a href="cities.html?region=Bayern" class="region-card">
+                    <h2>Bayern</h2>
+                <div class="region-card">
+                    <img src="/api/placeholder/400/500" alt="Bayern">
+                    <div class="region-card-content">
+                        <h3>Bayern</h3>
+                        <p>12 Modelle verfügbar</p>
+                    </div>
+                </div>
+                </a>
+                <a href="cities.html?region=Bayern" class="region-card">
+                    <h2>Bayern</h2>
+                <div class="region-card">
+                    <img src="/api/placeholder/400/500" alt="Bayern">
+                    <div class="region-card-content">
+                        <h3>Bayern</h3>
+                        <p>12 Modelle verfügbar</p>
+                    </div>
+                </div>
+                </a>
+                <a href="cities.html?region=Bayern" class="region-card">
+                    <h2>Bayern</h2>
+                <div class="region-card">
+                    <img src="/api/placeholder/400/500" alt="Bayern">
+                    <div class="region-card-content">
+                        <h3>Bayern</h3>
+                        <p>12 Modelle verfügbar</p>
+                    </div>
+                </div>
+                </a>
+                <a href="cities.html?region=Bayern" class="region-card">
+                    <h2>Bayern</h2>
+                <div class="region-card">
+                    <img src="/api/placeholder/400/500" alt="Bayern">
+                    <div class="region-card-content">
+                        <h3>Bayern</h3>
+                        <p>12 Modelle verfügbar</p>
+                    </div>
+                </div>
+                </a>
+                <a href="cities.html?region=Bayern" class="region-card">
+                    <h2>Bayern</h2>
+                <div class="region-card">
+                    <img src="/api/placeholder/400/500" alt="Bayern">
+                    <div class="region-card-content">
+                        <h3>Bayern</h3>
+                        <p>12 Modelle verfügbar</p>
+                    </div>
+                </div>
+                </a>
+                <a href="regionen.html" class="product-card">
+                    <div class="shop-box">
+                        <span class="plus-icon">+</span>
+                    </div>
+                </a>
+                
+            </div>
+            
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container">
+            <div class="about">
+                <div class="about-content">
+                    <h2>Über Versity</h2>
+                    <p>Versity ist ein Anbieter hochwertiger 3D-Modelle mit Fokus auf architektonische Wahrzeichen aus verschiedenen deutschen Regionen. Unser Team besteht aus leidenschaftlichen 3D-Künstlern und Architekten, die die Essenz jeder lokalen Baukultur authentisch einfangen.</p>
+                    <p>Von historischen Gebäuden bis hin zu modernen Stadtlandschaften – unsere Modelle zelebrieren die architektonische Vielfalt Deutschlands und bewahren kulturelles Erbe in digitaler Form.</p>
+                    <a href="#" class="btn">Mehr erfahren</a>
+                </div>
+                <div class="about-image">
+                    <img src="./photo_2025-03-12_22-34-28.jpg" alt="Über Versity">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Regions Page -->
+    <div id="regions-page" style="display: none;">
+        <div class="container regions-page">
+            <h1 class="section-title">Deutsche Regionen</h1>
+            <div class="region-filter">
+                <select id="region-select">
+                    <option value="">Region auswählen</option>
+                    <option value="bayern">Bayern</option>
+                    <option value="nrw">Nordrhein-Westfalen</option>
+                    <option value="berlin-brandenburg">Berlin/Brandenburg</option>
+                    <option value="hamburg">Hamburg</option>
+                    <option value="sachsen">Sachsen</option>
+                </select>
+                <select id="city-select" disabled>
+                    <option value="">Stadt auswählen</option>
+                </select>
+            </div>
+            
+            <div class="cities-grid">
+                <!-- Cities will be populated dynamically based on selected region -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Page -->
+    <div id="products-page" style="display: none;">
+
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Berliner Fernsehturm">
+                    <div class="">
+                        
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Kölner Dom">
+                    <div class="">
+                        <h3>Kölner Dom</h3>
+                        <p>Köln</p>
+                        <span class="price">€129,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Münchner Marienplatz">
+                    <div class="product-card-content">
+                        <h3>Marienplatz</h3>
+                        
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Dresdner Frauenkirche">
+                    <div class="product-card-content">
+                        <h3>Frauenkirche</h3>
+                        <p>Dresden</p>
+                        <span class="price">€109,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Frankfurter Skyline">
+                    <div class="product-card-content">
+                        <h3>Frankfurter Skyline</h3>
+                        <p>Frankfurt</p>
+                        <span class="price">€149,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Schloss Neuschwanstein">
+                    <div class="product-card-content">
+                        <h3>Schloss Neuschwanstein</h3>
+                        <p>Schwangau</p>
+                        <span class="price">€159,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Düsseldorfer Rheinturm">
+                    <div class="product-card-content">
+                        <h3>Rheinturm</h3>
+                        <p>Düsseldorf</p>
+                        <span class="price">€74,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/400/500" alt="Hamburger Hafen">
+                    <div class="product-card-content">
+                        <h3>Hamburger Hafen</h3>
+                        <p>Hamburg</p>
+                        <span class="price">€99,99</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Versity</h3>
+                    <p>Hochwertige 3D-Modelle deutscher Architektur für Ihre kreativen Projekte.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Produkte</a></li>
+                        <li><a href="regions.html">Regionen</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundenservice</h3>
+                    <ul>
+                        <li><a href="about.html#faq">FAQ</a></li>
+                        <li><a href="about.html#shipping">Versand</a></li>
+                        <li><a href="about.html#return">Rückgaben</a></li>
+                        <li><a href="about.html#payment">Zahlungsmethoden</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li>Email: info@versity.de</li>
+                        <li>Telefon: +49 30 1234567</li>
+                        <li>Adresse: Musterstraße 123, Berlin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </footer>
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/tets2.js"></script>
+
+    <script src="js/slider.js"></script>
+    <script src="js/icon.js"></script>
